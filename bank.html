@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<head>
+  <title>{{title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel='shortcut icon' href='img/cloudChargeIcon.png' type='image/x-icon' />
+  <link rel="stylesheet" type="text/css" href="css/slideoutMenu.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+  <script src="js/slideoutMenu.js" type="text/javascript"></script>
+  <script src="js/jquery.js" type="text/javascript"></script>
+  <script src="js/handlebars.js" type="text/javascript"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-database.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyB6XkfMRPrDPxCZgqc5fwmjaSJeqwn5LI0",
+      authDomain: "cloudcharge-e9470.firebaseapp.com",
+      databaseURL: "https://cloudcharge-e9470.firebaseio.com",
+      storageBucket: "",
+      messagingSenderId: "296812400797"
+    };
+    firebase.initializeApp(config);
+  </script>
+</head>
+
+<body>
+  <div class="slideout-menu">
+    <div class="userInfo">
+      <img src="img/userIcon.png" height="120px"></img>
+      <h4 style="font-weight: normal">gardsama</h>
+      <h4>samantha.ellen.gard@gmail.com</h>
+    </div>
+    <a href="#" class="slideout-menu-toggle">x</a>
+    <div class="menu">
+      <ul>
+        <li><a href="yourBanks.html"><h3>Your Banks</h></a></li>
+        <li><a href="market.html"><h3>Charge Market</h></a></li>
+        <li><a href="transfer.html"><h3>Transfer Charge</h></a></li>
+        <li><a href="settings.html"><h3>Settings</h></a></li>
+        <li><a href="login.html"><h3>Log Out</h></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container" id="container">
+  </div>
+
+  <script id="banks-template" type="text/x-handlebars-template">
+    {{#each banks}}
+      {{> bank}}
+    {{/each}}
+  </script>
+
+  <script id="bank-partial" type="text/x-handlebars-template">
+    <nav>
+      <a href="#" class="slideout-menu-toggle"><img id="menu_icon" src="img/menuIcon.png"></img></a>
+      <h1>{{title}}</h1>
+    </nav>
+
+    <div class="content">
+      <div class="battery">
+        <img id="batteryIcon" src="img/{{batteryIconUrl}}"></img>
+      </div>
+      <div class="infoSection">
+        <div class="bankInfo">
+          <h4 class="pullLeft">AVAILABLE</h>
+          <h4 class="pullRight">CAPACITY</h>
+          <h6 class="pullLeft">{{availableCharge}}</h>
+          <h6 class="pullRight">{{capacity}}</h>
+        </div>
+      </div>
+      <div class="infoSection">
+          <h5 class="pullLeft1">OWNER</h>
+          <h6 class="pullRight1">{{owner}}</h>
+      </div>
+      <div class="infoSection">
+          <h5 class="pullLeft1">PLAN DETAILS</h>
+          <h6 class="pullRight1">{{planDetails}}</h>
+      </div>
+      <div class="infoSection">
+          <h5 class="pullLeft1">CHARGE TYPE</h>
+          <h6 class="pullRight1">{{chargeType}}</h>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      // compile our template
+      var template = Handlebars.compile($("#banks-template").html());
+
+      // add the person partial
+      Handlebars.registerPartial("bank", $("#bank-partial").html());
+
+      var data = {
+        banks: [
+          { title:"Everyday", batteryIconUrl:"battery1.png", availableCharge:"10,245", capacity:"12,000",
+            owner:"gardsama", planDetails:"Monthly Premium", chargeType:"Contact + Wireless" },
+          { title:"Middle East Trip", batteryIconUrl:"battery1.png", availableCharge:20, capacity:20,
+            owner:"", planDetails:"", chargeType:"" },
+          { title:"", batteryIconUrl:"battery1.png", availableCharge:20, capacity:20,
+            owner:"", planDetails:"", chargeType:"" },
+          { title:"", batteryIconUrl:"battery1.png", availableCharge:20, capacity:20,
+            owner:"", planDetails:"", chargeType:"" },
+          { title:"", batteryIconUrl:"battery1.png", availableCharge:20, capacity:20,
+            owner:"", planDetails:"", chargeType:"" },
+          { title:"", batteryIconUrl:"battery1.png", availableCharge:20, capacity:20,
+            owner:"", planDetails:"", chargeType:"" },
+          { title:"", batteryIconUrl:"battery1.png", availableCharge:20, capacity:20,
+            owner:"", planDetails:"", chargeType:"" },
+          { title:"", batteryIconUrl:"battery1.png", availableCharge:20, capacity:20,
+            owner:"", planDetails:"", chargeType:"" }
+        ]
+      };
+
+      $('#container').html(template(data));
+    });
+  </script>
+</body>
