@@ -1,11 +1,25 @@
-function createBank(bankName, iconUrl, initialCharge, capacity, owner, planType, chargeType) {
-  firebase.database().ref('banks/' + bankId).set({
-    title: bankName,
-    batteryIconUrl: iconUrl,
-    availableCharge: initialCharge,
-    capacity: capacity,
-    owner: owner,
-    planDetails: planType,
-    chargeType: chargeType
-  });
+function initialiseBanks() {
+  firebase.database().ref('/').set(data);
+}
+
+function createBank() {
+  // var b = data.banks.personal.everyday;
+
+  // firebase.database().ref('/banks/personal/everyday').set({
+  //   title: b.title,
+  //   batteryIconUrl: b.batteryIconUrl,
+  //   availableCharge: b.availableCharge,
+  //   capacity: b.capacity,
+  //   owner: b.owner,
+  //   planDetails: b.planDetails,
+  //   chargeType: b.chargeType
+  // });
+}
+
+function editBank() {
+  
+}
+
+function deleteBank() {
+
 }
