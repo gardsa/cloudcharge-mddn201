@@ -1,5 +1,23 @@
 function initialiseBanks() {
-  firebase.database().ref('/').set(data);
+  firebase.database().ref('/').set(banks);
+}
+
+function displayBank() {
+  getDetails("title");
+  getDetails("availableCharge");
+  getDetails("capacity");
+  getDetails("owner");
+  getDetails("planDetails");
+  getDetails("chargeType");
+}
+
+function getDetails(name) {
+  var element = document.getElementById(name);
+  var text = firebase.database().ref('/banks/personal/everyday/' + name);
+
+  text.on('value', snap => {
+    element.innerText = snap.val();
+  });
 }
 
 function createBank() {
@@ -17,7 +35,7 @@ function createBank() {
 }
 
 function editBank() {
-  
+
 }
 
 function deleteBank() {
