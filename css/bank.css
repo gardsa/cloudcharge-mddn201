@@ -1,0 +1,61 @@
+.battery {
+  background-color: #353535;
+}
+
+#batteryIcon {
+  display: block;
+  margin: 0 auto;
+  padding: 50px 0px;
+}
+
+.pullLeft, .pullRight {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+}
+
+h5, h6 {
+  font-family: "Gill Sans", sans-serif;
+  font-weight: 100;
+  font-size: 1.17em;
+  line-height: 1em;
+  color: #fff;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+h5 {
+  font-weight: normal;
+}
+
+.bankInfo {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.pullLeft1, .pullRight1 {
+  width: 47.5%;
+  display: inline-block;
+}
+
+.infoSection {
+  margin: 0 auto;
+  padding: 20px 0px;
+  /*border-bottom: 1px solid #e5e5e5;*/
+}
+
+.pullLeft1 {
+  text-align: right;
+  padding-right: 2.5%;
+}
+
+.pullRight1 {
+  text-align: left;
+  padding-left: 2.5%;
+}
+
+@media only screen and (min-width: 768px) {
+  .battery {
+    border-radius: 15px 15px 0px 0px;
+  }
+}

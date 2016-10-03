@@ -1,0 +1,177 @@
+html {
+  background-color: #757575;
+}
+
+body {
+  font-size: 100%;
+  margin: 0px;
+}
+
+h1, h2 {
+  font-family: "Futura-CondensedMedium", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  margin:0;
+}
+
+h3, h4, p {
+  font-family: "Gill Sans", sans-serif;
+  color: #fff;
+  font-weight: 100;
+  margin:0;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 30px;
+}
+
+h2 {
+  font-size: 1.875em;
+  line-height: 1em;
+}
+
+h3 {
+  font-size: 1.17em;
+  line-height: 2em;
+}
+
+h4 {
+  font-size: 0.8em;
+  line-height: 1em;
+}
+
+p {
+  font-size: 0.875em;
+  line-height: 1em;
+}
+
+nav {
+  background-color: #757575;
+  padding: 20px;
+  /*border-bottom: 1px solid #e5e5e5;*/
+}
+
+hr {
+  display: block;
+  border: 0.25px solid #e5e5e5;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+#menuIcon {
+  height: 20px;
+  width: 30px;
+  float: left;
+  padding: 5px 15px 5px 0px
+}
+
+/* retrieved and modified from http://alijafarian.com/jquery-horizontal-slideout-menu/ */
+
+.slideout-menu {
+	position: fixed;
+	top: 0;
+	left: -250px;
+	width: 250px;
+	height: 100%;
+	background: #757575;
+	z-index: 100;
+  border-right: 1px solid #e5e5e5;
+}
+
+.slideout-menu .slideout-menu-toggle {
+	position: absolute;
+	top: 12px;
+	right: 10px;
+	display: inline-block;
+	padding: 6px 9px 5px;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	line-height: 1;
+	background: #222;
+	color: #999;
+	text-decoration: none;
+	vertical-align: top;
+}
+.slideout-menu .slideout-menu-toggle:hover {
+	color: #fff;
+}
+.slideout-menu ul {
+  margin: 0;
+  padding: 0;
+	list-style-type: none;
+	font-weight: 300;
+	border-top: 1px solid #e5e5e5;
+}
+.slideout-menu ul li {
+	/*border-bottom: 1px solid #e5e5e5;*/
+  padding: 10px 20px;
+}
+.slideout-menu ul li a {
+	position: relative;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+}
+
+/* --- */
+
+.userInfo {
+  padding: 10px;
+  background-color: #353535;
+}
+
+.container_opacity {
+  opacity: 0.1;
+}
+
+.title {
+  background-color: #353535;
+  margin: 0;
+  padding: 10px 20px;
+  /*border-bottom: 1px solid #e5e5e5;*/
+}
+
+.items {
+  background-color: #757575;
+  margin: 1px 0px 0px 0px;
+}
+
+.item {
+  padding: 10px 20px;
+  /*border-bottom: 1px solid #e5e5e5;*/
+}
+
+a:link {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+    width: 60%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  .content {
+    width: 60%;
+    border: 1px solid #e5e5e5;
+    border-radius: 15px;
+    margin: 0 auto;
+  }
+
+  .title:first-child {
+    border-radius: 15px 15px 0px 0px;
+  }
+
+  .items{
+    margin: 0 auto;
+    background-color: inherit;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  nav, .content {
+    width: 40%;
+  }
+}

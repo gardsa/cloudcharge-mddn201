@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='shortcut icon' href='img/cloudChargeIcon.png' type='image/x-icon' />
+
+  <link rel="stylesheet" type="text/css" href="css/base.css" />
+  <link rel="stylesheet" type="text/css" href="css/bank.css" />
+  <link rel="stylesheet" type="text/css" href="css/slideOutMenu.css" />
 
   <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-database.js"></script>
 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
   <script src="js/app.js" type="text/javascript"></script>
-  <script src="banks.js" type="text/javascript"></script>
-  <script src="js/databaseHandling.js" type="text/javascript"></script>
+  <script src="js/data.js" type="text/javascript"></script>
+  <script src="js/dbHandling.js" type="text/javascript"></script>
+  <script src="js/slideoutMenu.js" type="text/javascript"></script>
 
 </head>
 
 <body>
+  <div class="slideout-menu">
+    <div class="userInfo">
+      <img src="img/userIcon.png" height="120px"></img>
+      <h4 style="font-weight: normal">gardsama</h>
+      <h4>samantha.ellen.gard@gmail.com</h>
+    </div>
+    <a href="#" class="slideout-menu-toggle">x</a>
+    <div class="menu">
+      <ul>
+        <li><a href="yourBanks.html"><h3>Your Banks</h></a></li>
+        <li><a href="market.html"><h3>Charge Market</h></a></li>
+        <li><a href="transfer.html"><h3>Transfer Charge</h></a></li>
+        <li><a href="settings.html"><h3>Settings</h></a></li>
+        <li><a href="login.html"><h3>Log Out</h></a></li>
+      </ul>
+    </div>
+  </div>
+
   <div class="container">
   <nav>
-    <a href="#" class="slideout-menu-toggle"><img id="menu_icon" src="img/menuIcon.png"></img></a>
+    <a href="#" class="slideout-menu-toggle"><img id="menuIcon" src="img/menuIcon.png"></img></a>
     <h1 id="title"></h>
   </nav>
 
   <div class="content">
     <div class="battery">
-      <img id="battery_icon" src="img/battery1.png"></img>
+      <img id="batteryIcon" src="img/battery1.png"></img>
     </div>
-    <div class="info_section">
-      <div class="bank_info">
-        <h4 class="pull_left">AVAILABLE</h>
-        <h4 class="pull_right">CAPACITY</h>
-        <h6 class="pull_left" id="availableCharge"></h>
-        <h6 class="pull_right" id="capacity"></h>
+    <div class="infoSection">
+      <div class="bankInfo">
+        <h4 class="pullLeft">AVAILABLE</h>
+        <h4 class="pullRight">CAPACITY</h>
+        <h6 class="pullLeft" id="availableCharge"></h>
+        <h6 class="pullRight" id="capacity"></h>
       </div>
       </div>
-    <div class="info_section">
-        <h5 class="pull_left1">OWNER</h>
-        <h6 class="pull_right1" id="owner"></h>
+    <div class="infoSection">
+        <h5 class="pullLeft1">OWNER</h>
+        <h6 class="pullRight1" id="owner"></h>
     </div>
-    <div class="info_section">
-        <h5 class="pull_left1">PLAN DETAILS</h>
-        <h6 class="pull_right1" id="planDetails"></h>
+    <div class="infoSection">
+        <h5 class="pullLeft1">PLAN DETAILS</h>
+        <h6 class="pullRight1" id="planDetails"></h>
     </div>
-    <div class="info_section">
-        <h5 class="pull_left1">CHARGE TYPE</h>
-        <h6 class="pull_right1" id="chargeType"></h>
+    <div class="infoSection">
+        <h5 class="pullLeft1">CHARGE TYPE</h>
+        <h6 class="pullRight1" id="chargeType"></h>
     </div>
   </div>
 </div>
