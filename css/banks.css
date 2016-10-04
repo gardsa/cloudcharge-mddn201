@@ -1,0 +1,11 @@
+#batteryIcon {
+  float: left;
+  padding-right: 10px;
+}
+
+.addBank {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  padding: 10px;
+}

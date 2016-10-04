@@ -147,13 +147,31 @@ a:link {
 }
 
 @media only screen and (min-width: 768px) {
- .container {
-   position: absolute;
-   left: 250px;
-   width: calc(100% - 250px);
- }
+  nav {
+    width: 60%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  .content {
+    width: 60%;
+    border: 1px solid #e5e5e5;
+    border-radius: 15px;
+    margin: 0 auto;
+  }
+
+  .title:first-child {
+    border-radius: 15px 15px 0px 0px;
+  }
+
+  .items{
+    margin: 0 auto;
+    background-color: inherit;
+  }
 }
 
 @media only screen and (min-width: 1224px) {
-
+  nav, .content {
+    width: 40%;
+  }
 }

@@ -11,13 +11,13 @@ $.notify.defaults({
 });
 
 $.notify.addStyle('addBankSuccess', {
-	html: "<div><span data-notify-text/></div>",
+	html: "<div><h3 data-notify-text/></h3></div>",
 	classes: {
 		base: {
 			"font-family" : "'Gill Sans', sans-serif",
 			"font-weight" : "100",
 			"width" : "150px",
-			"padding": "10px 20px 10px 20px",
+			"padding": "5px 20px 5px 20px",
 		  "background-color": "#84c441",
 		  "color": "#fff",
 		  "border": "solid 2px #fff",

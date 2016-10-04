@@ -27,7 +27,7 @@
       <h4 style="font-weight: normal">gardsama</h>
       <h4>samantha.ellen.gard@gmail.com</h>
     </div>
-    <a href="#" class="slideout-menu-toggle">x</a>
+    <a href="#" id="x_toggle" class="slideout-menu-toggle">x</a>
     <div class="menu">
       <ul>
         <li><a href="yourBanks.html"><h3>Your Banks</h></a></li>
@@ -47,7 +47,10 @@
 
   <div class="content">
     <div class="battery">
-      <object id="batteryIcon" data="img/battery.svg" type="image/svg+xml" style="height: 193px"></object>
+      <!--
+        <object id="batteryIcon" data="img/battery.svg" type="image/svg+xml" style="height: 193px"></object>
+      -->
+      <img id="batteryIcon" src="img/battery.svg" style="height: 193px"></img>
     </div>
     <div class="infoSection">
       <div class="bankInfo">
@@ -74,12 +77,16 @@
 
 <script>
   // function displayAvailableCharge() {
-  //   var a = g
+  //   var a = getElementById("batteryIcon");
   //   var svgDoc = a.getSVGDocument();
 	//   var chargeRect = svgDoc.getElementById("_availableCharge_");
   //   chargeRect.setAttribute("height", "100px");
   // }
 
-  // set element onclick event handler
+  // -----------------------------------
+
+  // function displayAvailableCharge() {
+  //   document.getElementById("batteryIcon").style.clip = "rect(100px 0px 0px 0px)";
+  // }
 </script>
 </body>

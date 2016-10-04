@@ -45,3 +45,17 @@
 	color: #fff;
 	text-decoration: none;
 }
+
+@media only screen and (min-width: 768px) {
+	.slideout-menu {
+		position: fixed;
+		float: left;
+		top: 0;
+		left: 0px;
+		width: 250px;
+	}
+
+	#x_toggle, .slideout-menu-toggle {
+		display: none;
+	}
+}

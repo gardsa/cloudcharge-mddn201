@@ -1,3 +1,0 @@
-function everyday() {
-  displayBank("everyday");
-}

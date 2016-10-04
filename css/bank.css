@@ -1,5 +1,6 @@
 .battery {
   background-color: #353535;
+  text-align: center;
 }
 
 #batteryIcon {
@@ -56,6 +57,15 @@ h5 {
 
 @media only screen and (min-width: 768px) {
   .battery {
-    border-radius: 15px 15px 0px 0px;
+    float: left;
+    width: 40%;
   }
+  .infoSection {
+    float: right;
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .
 }

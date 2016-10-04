@@ -12,9 +12,9 @@ function displayBank(bankName) {
   getDetails("chargeType", bank);
 }
 
-function getDetails(name, bank) {
-  var element = document.getElementById(name);
-  var text = firebase.database().ref('/banks/personal/' + bank + '/' + name);
+function getDetails(elementName, bank) {
+  var element = document.getElementById(elementName);
+  var text = firebase.database().ref('/banks/personal/' + bank + '/' + elementName);
 
   text.on('value', snap => {
     element.innerText = snap.val();
