@@ -28,20 +28,24 @@ function createBank(formObj) {
   var formTitle = formObj.title.value;
 
   dbRef.push({
-    formBankType: {
-      formTitle: {
-        title: formObj.title.value,
-        batteryIconUrl: formObj.batteryIconUrl.value,
-        availableCharge: '0',
-        capacity: formObj.capacity.value,
-        owner: formObj.owner.value,
-        planDetails: formObj.planDetails.value,
-        chargeType: formObj.chargeType.value
-      }
-    }
+    title: formObj.title.value,
+    availableCharge: '0',
+    capacity: formObj.capacity.value,
+    owner: formObj.owner.value,
+    planDetails: formObj.planDetails.value,
+    chargeType: formObj.chargeType.value
   },
   function(){
-    console.log('Dta daved');
+    document.getElementById("addBankForm").reset();
+
+    $('#addBankBtn').notify(
+      "Bank Added",
+      {
+        position:"bottom center",
+        style: "addBankSuccess",
+        className: "base"
+      }
+    );
   });
 }
 
@@ -52,5 +56,3 @@ function editBank() {
 function deleteBank() {
 
 }
-
-// window.onload = displayBank();

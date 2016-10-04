@@ -1,0 +1,49 @@
+form {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input, select {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+select {
+  padding: 10px;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+  width: 80%;
+  height: 42px;
+  border-radius: 15px;
+}
+
+input {
+  margin-bottom: 10px;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+}
+
+.selectBorder, .inputBorder {
+  padding: 10px;
+  background-color: #353535;
+  color: #fff;
+  border: solid 2px #fff;
+  border-radius: 15px;
+  transition: border 0.3s;
+}
+.selectBorder:focus, .selectBorder.focus,
+.inputBorder:focus, .inputBorder.focus {
+  border: solid 2px #353535;
+}
+
+button {
+  padding: 7px 20px 10px 20px;
+  background-color: #84c441;
+  color: #fff;
+  border: solid 2px #fff;
+  border-radius: 15px;
+}
