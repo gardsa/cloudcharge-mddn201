@@ -165,3 +165,63 @@ button {
 @media only screen and (min-width: 1224px) {
 
 }
+
+/* retrieved and modified from http://alijafarian.com/jquery-horizontal-slideout-menu/ */
+
+.slideout-menu {
+	position: fixed;
+	top: 0;
+	left: -250px;
+	width: 250px;
+	height: 100%;
+	background: #757575;
+	z-index: 100;
+  border-right: 1px solid #e5e5e5;
+}
+
+.slideout-menu .slideout-menu-toggle {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	display: inline-block;
+	font-family: 'Gill Sans', sans-serif;
+	font-weight: 100;
+	font-size: 1.2em;
+	color: #fff;
+	text-decoration: none;
+	vertical-align: top;
+}
+.slideout-menu .slideout-menu-toggle:hover {
+	color: #fff;
+}
+.slideout-menu ul {
+  margin: 0;
+  padding: 0;
+	list-style-type: none;
+	font-weight: 300;
+	border-top: 1px solid #e5e5e5;
+}
+.slideout-menu ul li {
+	/*border-bottom: 1px solid #e5e5e5;*/
+  padding: 10px 20px;
+}
+.slideout-menu ul li a {
+	position: relative;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+	.slideout-menu {
+		position: fixed;
+		float: left;
+		top: 0;
+		left: 0px;
+		width: 250px;
+	}
+
+	#x_toggle, .slideout-menu-toggle {
+		display: none;
+	}
+}
