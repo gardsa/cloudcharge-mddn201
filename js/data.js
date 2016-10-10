@@ -10,7 +10,7 @@ var data = {
         "planDetails": "Monthly Premium",
         "chargeType": "Contact + Wireless"
       },
-      "middleEastTrip": {
+      "middleeasttrip": {
         "title": "Middle East Trip",
         "batteryIconUrl": "battery2.png",
         "availableCharge": "12,400",
@@ -30,7 +30,7 @@ var data = {
       }
     },
     "local": {
-      "vicUni": {
+      "vicuni": {
         "title": "Victoria University",
         "batteryIconUrl": "battery4.png",
         "availableCharge": "60,513",
@@ -39,7 +39,7 @@ var data = {
         "planDetails": "Annual Premium",
         "chargeType": "Wireless"
       },
-      "touristCentre": {
+      "touristcentre": {
         "title": "Tourist Centre",
         "batteryIconUrl": "battery5.png",
         "availableCharge": "72,148",
@@ -59,7 +59,7 @@ var data = {
         "planDetails": "Annual Professional",
         "chargeType": "Wireless"
       },
-      "plugFree": {
+      "plugfree": {
         "title": "PlugFree",
         "batteryIconUrl": "battery7.png",
         "availableCharge": "212,783",
@@ -68,7 +68,7 @@ var data = {
         "planDetails": "Annual Free",
         "chargeType": "Wireless"
       },
-      "chargeAsia": {
+      "chargeasia": {
         "title": "Charge Asia",
         "batteryIconUrl": "battery8.png",
         "availableCharge": "987,010",

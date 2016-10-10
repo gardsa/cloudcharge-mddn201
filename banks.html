@@ -49,49 +49,48 @@
 
     <div class="content">
       <h2 class="title">Personal</h2>
-      <div class="items">
-        <div class="item">
-          <img id="batteryIcon" src="img/battery1.png" height="40px"></img>
-          <h3 onClick="displayBank(this)" data-key="dsaldkshalkdj">Everyday</h3>
-        </div>
-        <div class="item">
-          <img id="batteryIcon" src="img/battery2.png" height="40px"></img>
-          <a href="middle_east_trip.html"><h3>Middle East Trip</h3></a>
-        </div>
-        <div class="item">
-          <img id="batteryIcon" src="img/battery3.png" height="40px"></img>
-          <a href="backup.html"><h3>Backup</h3></a>
-        </div>
+      <div class="items" id="personal">
+
+        <script id="personalBanksTemplate" type="text/x-handlebars-template">
+          {{#each personal}}
+            {{> bank}}
+          {{/each}}
+        </script>
+
+        <script id="personalBanksPartial" type="text/x-handlebars-template">
+          <div class="item">
+            <h3 onClick="displayBank(this)" data-key="dsaldkshalkdj">{{banks.personal.title}}</h3>
+          </div>
+        </script>
+
       </div>
       <h2 class="title">Local</h2>
-      <div class="items">
-        <div class="item">
-          <img id="batteryIcon" src="img/battery4.png" height="40px"></img>
-          <a href="vic_uni.html"><h3>Victoria University</h3></a>
-        </div>
-        <div class="item">
-          <img id="batteryIcon" src="img/battery5.png" height="40px"></img>
-          <a href="tourist_centre.html"><h3>Tourist Centre</h3></a>
-        </div>
+      <div class="items" id="local">
+
       </div>
       <h2 class="title">Global</h2>
-      <div class="items">
-        <div class="item">
-          <img id="batteryIcon" src="img/battery6.png" height="40px"></img>
-          <a href="energise.html"><h3>Energise</h3></a>
-        </div>
-        <div class="item">
-          <img id="batteryIcon" src="img/battery7.png" height="40px"></img>
-          <a href="plugfree.html"><h3>PlugFree</h3></a>
-        </div>
-        <div class="item">
-          <img id="batteryIcon" src="img/battery8.png" height="40px"></img>
-          <a href="charge_asia.html"><h3>Charge Asia</h3></a>
-          <div class="addBank">
-            <a href="createBank.html"><img id="fixed" src="img/addBank.png" height="50px"></img></a>
-          </div>
-        </div>
+      <div class="items" id="global">
+
       </div>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        // compile our template
+        var template = Handlebars.compile($("#personalBanksTemplate").html());
+
+        // add the person partial
+        Handlebars.registerPartial("bank", $("#personalBanksPartial").html());
+
+        var data = dataObj;
+
+        $('#personal').html(template(data));
+      });
+    </script>
+
+    <div class="addBank">
+      <a href="createBank.html"><img id="fixed" src="img/addBank.png" height="50px"></img></a>
     </div>
   </div>
 </body>

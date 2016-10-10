@@ -1,3 +1,9 @@
+var dataObj;
+firebase.database().ref('/').on('value', function(snapshot){
+  console.log(snapshot.val());
+  dataObj = snapshot.val();
+});
+
 function initialiseBanks() {
   firebase.database().ref('/').set(data);
 }
@@ -23,11 +29,12 @@ function getDetails(elementName, bank) {
 
 function createBank(formObj) {
   var formBankType = formObj.bankType.value;
-  var dbRef = firebase.database().ref('/banks/' + formBankType);
+  var formTitle = formObj.title.value.toLowerCase();
+  formTitle = formTitle.replace(/\s+/g, '');
+  var dataKey = formTitle;
+  var dbRef = firebase.database().ref('/banks/' + formBankType + '/' + formTitle);
 
-  var formTitle = formObj.title.value;
-
-  dbRef.push({
+  dbRef.set({
     title: formObj.title.value,
     availableCharge: '0',
     capacity: formObj.capacity.value,
@@ -55,4 +62,19 @@ function editBank() {
 
 function deleteBank() {
 
+}
+
+function render() {
+  $(document).ready(function() {
+
+    // compile our template
+    var template = Handlebars.compile($("#banks-template").html());
+
+    // add the bank partial
+    Handlebars.registerPartial("bank", $("#personal-partial").html());
+    Handlebars.registerPartial("bank", $("#local-partial").html());
+    Handlebars.registerPartial("bank", $("#global-partial").html());
+
+    $('#list').html(template(dataObj));
+  });
 }
