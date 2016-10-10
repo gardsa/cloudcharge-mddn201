@@ -4,7 +4,9 @@
   <title>Charge Banks</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel='shortcut icon' href='img/cloudChargeIcon.png' type='image/x-icon' />
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" href="css/base.css" />
   <link rel="stylesheet" type="text/css" href="css/bank.css" />
@@ -49,9 +51,13 @@
   <div class="container">
     <nav>
       <a href="#" class="slideout-menu-toggle"><img id="menuIcon" src="img/menuIcon.png"></img></a>
-      <h1 id="pageTitle"></h1>
+      <img id="backBtn" src="img/backBtn.png" style="display:none; height:30px; float:left;" onclick="renderAllBanks();"></img>
+      <h1 id="pageTitle" style="display:inline"></h1>
     </nav>
     <div class="content" id="content">
+    </div>
+    <div class="addBank" id="addBank">
+      <a href="createBank.html"><img id="fixed" src="img/addBank.png" height="50px"></img></a>
     </div>
   </div>
 
@@ -141,6 +147,10 @@
 
       var pageTitle = document.getElementById("pageTitle");
       pageTitle.innerHTML = "Charge Banks";
+
+      document.getElementById("backBtn").style.display = "none";
+      document.getElementById("addBank").style.display = "inline";
+
     }
 
     function renderSelectedBank(){
@@ -151,6 +161,9 @@
 
       var pageTitle = document.getElementById("pageTitle");
       pageTitle.innerHTML = selectedBank.title;
+
+      document.getElementById("backBtn").style.display = "inline";
+      document.getElementById("addBank").style.display = "none";
     }
 
     function onClickEvent(obj){
@@ -178,7 +191,6 @@
     }
 
     function deleteBank(){
-      // var bankToRemove;
       $.each(dataObj.banks.personal, function(index, value) {
         if(index === selectedBank.title){
           console.log(index);

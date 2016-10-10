@@ -14,7 +14,7 @@ body {
 }
 
 h1, h2 {
-  font-family: "Gill Sans", sans-serif;
+  font-family: "Dosis", sans-serif;
   font-weight: normal;
   color: #fff;
   margin: 0;
@@ -181,6 +181,31 @@ button {
    position: absolute;
    left: 250px;
    width: calc(100% - 250px);
+ }
+
+ h1 {
+   font-size: 2em;
+   line-height: 30px;
+ }
+
+ h2 {
+   font-size: 1.5em;
+   line-height: 1em;
+ }
+
+ h3 {
+   font-size: 1.2em;
+   line-height: 2em;
+ }
+
+ h4 {
+   font-size: 1em;
+   line-height: 1em;
+ }
+
+ p {
+   font-size: 1.05em;
+   line-height: 1em;
  }
 }
 
