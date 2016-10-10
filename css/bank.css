@@ -8,6 +8,7 @@
 #largeBatteryIcon {
   display: block;
   margin: 0 auto;
+  height: 150px;
   padding: 25px 0px 25px 0px;
 }
 
@@ -67,12 +68,30 @@ h5 {
 @media only screen and (min-width: 768px) {
   .battery {
     float: left;
-    width: 40%;
-    height: 100%;
+    width: calc(40% - 1px);
+    height: calc(100vh - 72px);
+    display: table-cell;
+    vertical-align: middle;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: none;
   }
-  .infoSection {
+
+  #largeBatteryIcon {
+    padding: 150px 0px 25px 0px;
+    height: 200px;
+  }
+
+  .info{
+    padding-top: 150px;
+    border-top: 1px solid #e5e5e5;
+    /*border-bottom: 1px solid #e5e5e5;*/
     float: right;
     width: 60%;
+  }
+
+  .infoSection {
+    /*float: right;
+    width: 60%;*/
   }
 }
 

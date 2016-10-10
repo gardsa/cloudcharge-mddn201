@@ -99,31 +99,33 @@
       <!--
         <object id="batteryIcon" data="img/battery.svg" type="image/svg+xml" style="height: 193px"></object>
       -->
-      <img id="largeBatteryIcon" src="img/battery.svg" style="height: 150px"></img>
+      <img id="largeBatteryIcon" src="img/battery.svg"></img>
       <div class="buttons">
           <img src="img/edit.png" onclick="window.location.href='editBank.html';"></img>
           <img src="img/delete.png" onclick="deleteBank();"></img>
       </div>
     </div>
-    <div class="infoSection">
-      <div class="bankInfo">
-        <h4 class="pullLeft">AVAILABLE</h>
-        <h4 class="pullRight">CAPACITY</h>
-        <h6 class="pullLeft" id="availableCharge">{{availableCharge}}</h>
-        <h6 class="pullRight" id="capacity">{{capacity}}</h>
+    <div class="info">
+      <div class="infoSection">
+        <div class="bankInfo">
+          <h4 class="pullLeft">AVAILABLE</h>
+          <h4 class="pullRight">CAPACITY</h>
+          <h6 class="pullLeft" id="availableCharge">{{availableCharge}}</h>
+          <h6 class="pullRight" id="capacity">{{capacity}}</h>
+        </div>
       </div>
-    </div>
-    <div class="infoSection">
-        <h5 class="pullLeft1">OWNER</h>
-        <h6 class="pullRight1" id="owner">{{owner}}</h>
-    </div>
-    <div class="infoSection">
-        <h5 class="pullLeft1">PLAN DETAILS</h>
-        <h6 class="pullRight1" id="planDetails">{{planDetails}}</h>
-    </div>
-    <div class="infoSection">
-        <h5 class="pullLeft1">CHARGE TYPE</h>
-        <h6 class="pullRight1" id="chargeType">{{chargeType}}</h>
+      <div class="infoSection">
+          <h5 class="pullLeft1">OWNER</h>
+          <h6 class="pullRight1" id="owner">{{owner}}</h>
+      </div>
+      <div class="infoSection">
+          <h5 class="pullLeft1">PLAN DETAILS</h>
+          <h6 class="pullRight1" id="planDetails">{{planDetails}}</h>
+      </div>
+      <div class="infoSection">
+          <h5 class="pullLeft1">CHARGE TYPE</h>
+          <h6 class="pullRight1" id="chargeType">{{chargeType}}</h>
+      </div>
     </div>
   </script>
 
