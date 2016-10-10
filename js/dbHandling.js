@@ -60,11 +60,6 @@ function editBank() {
 
 }
 
-// function deleteBank(key) {
-//   var ref = firebase.database().ref('/');
-//   ref.child(key).remove();
-// }
-
 function render() {
   $(document).ready(function() {
 

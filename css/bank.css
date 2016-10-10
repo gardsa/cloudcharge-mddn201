@@ -3,7 +3,7 @@
   text-align: center;
 }
 
-#batteryIcon {
+#largeBatteryIcon {
   display: block;
   margin: 0 auto;
   padding: 50px 0px;
@@ -55,10 +55,21 @@ h5 {
   padding-left: 2.5%;
 }
 
+.buttons {
+  width: 164px;
+  margin: 0 auto;
+}
+
+.buttons button {
+  width: 80px;
+  text-align: center;
+}
+
 @media only screen and (min-width: 768px) {
   .battery {
     float: left;
     width: 40%;
+    height: 100%;
   }
   .infoSection {
     float: right;
