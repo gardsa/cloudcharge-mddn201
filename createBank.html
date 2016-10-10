@@ -31,7 +31,7 @@
     <a href="#" id="x_toggle" class="slideout-menu-toggle">x</a>
     <div class="menu">
       <ul>
-        <li><a href="yourBanks.html"><h3>Your Banks</h></a></li>
+        <li><a href="index.html"><h3>Your Banks</h></a></li>
         <li><a href="market.html"><h3>Charge Market</h></a></li>
         <li><a href="transfer.html"><h3>Transfer Charge</h></a></li>
         <li><a href="settings.html"><h3>Settings</h></a></li>
@@ -48,19 +48,23 @@
 
   <div class="content">
     <form class="addBankForm" id="addBankForm" role="form" onsubmit="event.preventDefault(); createBank(this);">
-      <select class="selectBorder" id="formBankType" name="bankType" type="text" placeholder="Bank Type" required>
-        <option value="" disabled selected>-- Bank Type --</option>
+      <label><h3>Type:</h3></label>
+      <select class="selectBorder" id="formBankType" name="bankType" type="text" required>
+        <option value="" disabled selected></option>
         <option value="personal">Personal</option>
         <option value="local">Local</option>
         <option value="global">Global</option>
       </select>
 
-      <input class="inputBorder" id="formTitle" name="title" type="text" placeholder="Bank Title" required>
+      <label><h3>Bank Name:</h3></label>
+      <input class="inputBorder" id="formTitle" name="title" type="text" required>
 
-      <input class="inputBorder" name="owner" type="text" placeholder="Owner" required>
+      <label><h3>Owner:</h3></label>
+      <input class="inputBorder" name="owner" type="text" required>
 
-      <select class="selectBorder" name="planDetails" type="text" placeholder="Plan Type" required>
-        <option value="" disabled selected>-- Plan Type --</option>
+      <label><h3>Plan:</h3></label>
+      <select class="selectBorder" name="planDetails" type="text" required>
+        <option value="" disabled selected></option>
         <option value="Monthly (Free)">Monthly (Free)</option>
         <option value="Monthly (Premium)">Monthly (Premium)</option>
         <option value="Monthly (Professional)">Monthly (Professional)</option>
@@ -69,16 +73,18 @@
         <option value="Annual (Professional)">Annual (Professional)</option>
       </select>
 
-      <select class="selectBorder" name="chargeType" type="text" placeholder="Charge Type" required>
-        <option value="" disabled selected>-- Charge Type --</option>
+      <label><h3>Charge Type:</h3></label>
+      <select class="selectBorder" name="chargeType" type="text" required>
+        <option value="" disabled selected></option>
         <option value="Contact Charge">Contact Charge</option>
         <option value="Wireless Charge">Wireless Charge</option>
         <option value="Contact + Wireless">Contact + Wireless</option>
       </select>
 
-      <input class="inputBorder" name="capacity" type="number" placeholder="Capacity" required>
+      <label><h3>Capacity:</h3></label>
+      <input class="inputBorder" name="capacity" type="number" required>
 
-      <button class="btn" id="addBankBtn" type="submit"><h3>Create</h3></button>
+      <h3><button class="btn" id="addBankBtn" type="submit">Create</button></h3>
     </form>
   </div>
 

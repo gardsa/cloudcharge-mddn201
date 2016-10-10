@@ -1,13 +1,23 @@
 form {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
 }
 
-input, select {
+label {
   width: 80%;
   margin: 0 auto;
+  text-align: left;
+}
+
+input, select {
+  width: 100%;
+  margin: 0 auto;
   display: block;
+  -ms-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
 }
 
 select {
@@ -15,9 +25,9 @@ select {
   font-family: "Gill Sans", sans-serif;
   font-size: 1em;
   font-weight: 100;
-  width: 80%;
   height: 42px;
   border-radius: 15px;
+  margin-bottom: 10px;
 }
 
 input {
