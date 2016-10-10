@@ -153,6 +153,14 @@ a:link {
   text-decoration: none;
 }
 
+button {
+  padding: 7px 20px 10px 20px;
+  background-color: #84c441;
+  color: #fff;
+  border: solid 2px #fff;
+  border-radius: 15px;
+}
+
 @media only screen and (min-width: 768px) {
  .container {
    position: absolute;

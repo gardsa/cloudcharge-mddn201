@@ -89,6 +89,7 @@
       -->
       <img id="batteryIcon" src="img/battery.svg" style="height: 193px"></img>
     </div>
+    <button onclick="deleteBank();">Delete Bank</button>
     <div class="infoSection">
       <div class="bankInfo">
         <h4 class="pullLeft">AVAILABLE</h>
@@ -164,6 +165,26 @@
 
       selectedBank = foundBankData;
       renderSelectedBank();
+    }
+
+    function deleteBank(){
+      // var bankToRemove;
+      $.each(dataObj.banks.personal, function(index, value) {
+        if(index === selectedBank.title){
+          console.log(index);
+          firebase.database().ref('/banks/personal/' + index).remove();
+        }
+      });
+      $.each(dataObj.banks.local, function(index, value) {
+        if(index === selectedBank.title){
+          firebase.database().ref('/banks/local/' + index).remove();
+        }
+      });
+      $.each(dataObj.banks.global, function(index, value) {
+        if(index === selectedBank.title){
+          firebase.database().ref('/banks/global/' + index).remove();
+        }
+      });
     }
   </script>
 </body>
