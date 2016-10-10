@@ -1,0 +1,82 @@
+.img {
+  text-align: center;
+}
+
+.cc_icon {
+  width: 150px;
+  padding: 50px;
+}
+
+.details {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login, .signup_button {
+  text-align: center;
+  color: #fff;
+}
+
+input {
+  margin-bottom: 10px;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+}
+
+.input-border {
+  padding: 10px;
+  background-color: #353535;
+  color: #fff;
+  border: solid 2px #fff;
+  border-radius: 15px;
+  transition: border 0.3s;
+}
+.input-border:focus,
+.input-border.focus {
+  border: solid 2px #353535;
+}
+
+.login {
+  margin: 0 auto;
+}
+
+.button {
+  width: 102px;
+  background-color: #84c441;
+  color: #fff;
+  border: solid 2px #fff;
+  border-radius: 15px;
+}
+
+.new_user, .cancel {
+  text-align: center;
+  padding: 10px;
+}
+
+.signup_content {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.signup {
+  display: inline;
+}
+
+.hide {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .cc_icon {
+    width: 200px;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .cc_icon {
+    width: 250px;
+  }
+}

@@ -8,7 +8,7 @@
 #largeBatteryIcon {
   display: block;
   margin: 0 auto;
-  padding: 50px 0px;
+  padding: 25px 0px 25px 0px;
 }
 
 .pullLeft, .pullRight {
@@ -57,14 +57,11 @@ h5 {
   padding-left: 2.5%;
 }
 
-.buttons {
-  width: 164px;
-  margin: 0 auto;
-}
-
-.buttons button {
-  width: 80px;
+.buttons img {
+  height: 30px;
   text-align: center;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 @media only screen and (min-width: 768px) {

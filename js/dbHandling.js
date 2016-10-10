@@ -1,30 +1,10 @@
 var dataObj;
 firebase.database().ref('/').on('value', function(snapshot){
-  console.log(snapshot.val());
   dataObj = snapshot.val();
 });
 
 function initialiseBanks() {
   firebase.database().ref('/').set(data);
-}
-
-function displayBank(bankName) {
-  var bank = bankName;
-  getDetails("title", bank);
-  getDetails("availableCharge", bank);
-  getDetails("capacity", bank);
-  getDetails("owner", bank);
-  getDetails("planDetails", bank);
-  getDetails("chargeType", bank);
-}
-
-function getDetails(elementName, bank) {
-  var element = document.getElementById(elementName);
-  var text = firebase.database().ref('/banks/personal/' + bank + '/' + elementName);
-
-  text.on('value', snap => {
-    element.innerText = snap.val();
-  });
 }
 
 function createBank(formObj) {
@@ -51,26 +31,12 @@ function createBank(formObj) {
         position:"bottom center",
         style: "addBankSuccess",
         className: "base"
-      }
-    );
+      });
   });
 }
 
-function editBank() {
-
-}
-
-function render() {
-  $(document).ready(function() {
-
-    // compile our template
-    var template = Handlebars.compile($("#banks-template").html());
-
-    // add the bank partial
-    Handlebars.registerPartial("bank", $("#personal-partial").html());
-    Handlebars.registerPartial("bank", $("#local-partial").html());
-    Handlebars.registerPartial("bank", $("#global-partial").html());
-
-    $('#list').html(template(dataObj));
-  });
+function populateEditBank(selectedBank) {
+  console.log(selectedBank);
+  var title = selectedBank.title;
+  document.getElementById("title").innerHTML = ("Edit > " + title);
 }

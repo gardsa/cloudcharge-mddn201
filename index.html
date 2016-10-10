@@ -6,7 +6,6 @@
   <link rel='shortcut icon' href='img/cloudChargeIcon.png' type='image/x-icon' />
 
   <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" href="css/base.css" />
   <link rel="stylesheet" type="text/css" href="css/bank.css" />
@@ -100,7 +99,11 @@
       <!--
         <object id="batteryIcon" data="img/battery.svg" type="image/svg+xml" style="height: 193px"></object>
       -->
-      <img id="largeBatteryIcon" src="img/battery.svg" style="height: 193px"></img>
+      <img id="largeBatteryIcon" src="img/battery.svg" style="height: 150px"></img>
+      <div class="buttons">
+          <img src="img/edit.png" onclick="window.location.href='editBank.html';"></img>
+          <img src="img/delete.png" onclick="deleteBank();"></img>
+      </div>
     </div>
     <div class="infoSection">
       <div class="bankInfo">
@@ -121,10 +124,6 @@
     <div class="infoSection">
         <h5 class="pullLeft1">CHARGE TYPE</h>
         <h6 class="pullRight1" id="chargeType">{{chargeType}}</h>
-    </div>
-    <div class="buttons">
-        <button>Edit</button>
-        <button onclick="deleteBank();">Delete</button>
     </div>
   </script>
 

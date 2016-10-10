@@ -110,6 +110,9 @@ button {
   color: #fff;
   border: solid 2px #fff;
   border-radius: 15px;
+  font-family: 'Gill Sans';
+  font-size: 1.17em;
+  font-weight: 100;
 }
 
 .cloudCharge {
