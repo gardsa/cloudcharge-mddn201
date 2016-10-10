@@ -192,18 +192,20 @@
 
     function deleteBank(){
       $.each(dataObj.banks.personal, function(index, value) {
-        if(index === selectedBank.title){
+        if(index == selectedBank.title.toLowerCase()){
           console.log(index);
           firebase.database().ref('/banks/personal/' + index).remove();
         }
       });
       $.each(dataObj.banks.local, function(index, value) {
-        if(index === selectedBank.title){
+        if(index == selectedBank.title.toLowerCase()){
+          console.log(index);
           firebase.database().ref('/banks/local/' + index).remove();
         }
       });
       $.each(dataObj.banks.global, function(index, value) {
-        if(index === selectedBank.title){
+        if(index == selectedBank.title.toLowerCase()){
+          console.log(index);
           firebase.database().ref('/banks/global/' + index).remove();
         }
       });
