@@ -36,7 +36,7 @@
       <h4 style="font-weight: normal">gardsama</h>
       <h4>samantha.ellen.gard@gmail.com</h>
     </div>
-    <a href="#" id="x_toggle" class="slideout-menu-toggle">x</a>
+    <a href="#" id="x_toggle" class="slideout-menu-toggle">X</a>
     <div class="menu">
       <ul>
     		<li><a href="index.html"><h3>Your Banks</h></a></li>
@@ -191,20 +191,22 @@
     }
 
     function deleteBank(){
+      var bankToRemove = selectedBank.title.toLowerCase();
+      bankToRemove = bankToRemove.replace(/\s+/g, '');
       $.each(dataObj.banks.personal, function(index, value) {
-        if(index == selectedBank.title.toLowerCase()){
+        if(index === bankToRemove){
           console.log(index);
           firebase.database().ref('/banks/personal/' + index).remove();
         }
       });
       $.each(dataObj.banks.local, function(index, value) {
-        if(index == selectedBank.title.toLowerCase()){
+        if(index === bankToRemove){
           console.log(index);
           firebase.database().ref('/banks/local/' + index).remove();
         }
       });
       $.each(dataObj.banks.global, function(index, value) {
-        if(index == selectedBank.title.toLowerCase()){
+        if(index === bankToRemove){
           console.log(index);
           firebase.database().ref('/banks/global/' + index).remove();
         }
