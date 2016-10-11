@@ -50,7 +50,7 @@
   </nav>
 
   <div class="content">
-    <form class="addBankForm" id="addBankForm" role="form" onsubmit="event.preventDefault(); createBank(this);">
+    <form class="addBankForm" id="addBankForm" role="form" onsubmit="event.preventDefault(); editBank(this);">
       <label><h3>Type:</h3></label>
       <select class="selectBorder" id="formBankType" name="bankType" type="text" required>
         <option value="" disabled selected></option>
@@ -87,7 +87,7 @@
       <label><h3>Capacity:</h3></label>
       <input class="inputBorder" name="capacity" type="number" required>
 
-      <button class="btn" id="addBankBtn" type="submit"><h4 style="font-size:0.9em; padding-top: 5px">Create</h4></button>
+      <button class="btn" id="addBankBtn" type="submit">Create</button>
     </form>
   </div>
   <script language="javascript" type="text/javascript">

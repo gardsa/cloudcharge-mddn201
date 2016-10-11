@@ -188,6 +188,8 @@
       });
 
       selectedBank = foundBankData;
+      localStorage.setItem('selectedBank', JSON.stringify(selectedBank));
+
       renderSelectedBank();
     }
 
