@@ -50,9 +50,16 @@
   </nav>
 
   <div class="content">
-    <form class="addBankForm" id="addBankForm" role="form" onsubmit="event.preventDefault(); createBank(this);">
-      <label><h3>Bank Name:</h3></label>
-      <input class="inputBorder" id="formTitle" name="title" type="text" required>
+    <form class="addBankForm" id="addBankForm" role="form" onsubmit="event.preventDefault(); editBank(this);">
+
+      <select style="display:none" class="selectBorder" id="formBankType" name="bankType" type="text" required>
+        <option value="" disabled></option>
+        <option value="personal">Personal</option>
+        <option value="local">Local</option>
+        <option value="global">Global</option>
+      </select>
+
+      <input style="display:none" class="inputBorder" id="formTitle" name="title" type="text" required>
 
       <label><h3>Owner:</h3></label>
       <input class="inputBorder" id="formOwner" name="owner" type="text" required>

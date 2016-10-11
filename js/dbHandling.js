@@ -15,6 +15,7 @@ function createBank(formObj) {
   var dbRef = firebase.database().ref('/banks/' + formBankType + '/' + formTitle);
 
   dbRef.set({
+    bankType: formObj.bankType.value,
     title: formObj.title.value,
     availableCharge: '0',
     capacity: formObj.capacity.value,
@@ -38,8 +39,11 @@ function createBank(formObj) {
 function populateEditBank(selectedBank) {
   // console.log(selectedBank);
   var title = selectedBank.title;
-  document.getElementById("title").innerHTML = ("Edit / " + title);
+  document.getElementById("title").innerHTML = (title + " / Edit");
   document.getElementById("formTitle").value = title;
+
+  var bankType = selectedBank.bankType;
+  document.getElementById("formBankType").value = bankType;
 
   var owner = selectedBank.owner;
   document.getElementById("formOwner").value = owner;
@@ -54,13 +58,15 @@ function populateEditBank(selectedBank) {
   document.getElementById("formCapacity").value = capacity;
 }
 
-function editBank(){
+function editBank(formObj){
+  var formBankType = formObj.bankType.value;
   var formTitle = formObj.title.value.toLowerCase();
   formTitle = formTitle.replace(/\s+/g, '');
   var dataKey = formTitle;
   var dbRef = firebase.database().ref('/banks/' + formBankType + '/' + formTitle);
 
   dbRef.set({
+    bankType: formObj.bankType.value,
     title: formObj.title.value,
     availableCharge: '0',
     capacity: formObj.capacity.value,
