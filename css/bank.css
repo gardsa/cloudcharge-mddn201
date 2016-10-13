@@ -58,11 +58,15 @@ h5 {
   padding-left: 2.5%;
 }
 
+.buttons {
+  text-align: center;
+}
+
 .buttons img {
   height: 30px;
   text-align: center;
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px 10px;
 }
 
 @media only screen and (min-width: 768px) {
