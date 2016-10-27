@@ -171,7 +171,7 @@ button {
 .slideout-menu {
 	position: fixed;
 	top: 0;
-	left: -250px;
+	left: -251px;
 	width: 250px;
 	height: 100%;
 	background: #757575;
@@ -224,4 +224,111 @@ button {
 	#x_toggle, .slideout-menu-toggle {
 		display: none;
 	}
+}
+
+/* Charge Market CSS */
+
+label {
+  font-family: "Gill Sans", sans-serif;
+  color: #fff;
+  font-size: 1.17em;
+  line-height: 1em;
+  font-weight: 100;
+  margin:0;
+}
+
+input {
+  font-family: "Gill Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+}
+
+.search-border {
+  width: 100%;
+  padding: 10px;
+  background-color: #353535;
+  color: #fff;
+  border: solid 2px #fff;
+  border-radius: 15px;
+  transition: border 0.3s;
+}
+.search-border:focus,
+.search-border.focus {
+  border: solid 2px #353535;
+}
+
+
+/* Transfer CSS */
+
+form {
+  text-align: center;
+}
+
+select {
+  padding: 10px;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+  width: 80%;
+  height: 42px;
+  border-radius: 15px;
+}
+
+.select-border {
+  padding: 10px;
+  background-color: #353535;
+  color: #fff;
+  border: solid 2px #fff;
+  border-radius: 15px;
+  transition: border 0.3s;
+}
+.select-border:focus,
+.select-border.focus {
+  border: solid 2px #353535;
+}
+
+.arrow {
+  padding: 10px;
+}
+
+.arrow_right {
+  width: 0px;
+}
+
+.arrow_down {
+  width: 50px;
+}
+
+.details {
+  padding-top: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+input {
+  margin-bottom: 10px;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+}
+
+.input-border {
+  padding: 10px;
+  background-color: #353535;
+  color: #fff;
+  border: solid 2px #fff;
+  border-radius: 15px;
+  transition: border 0.3s;
+}
+.input-border:focus,
+.input-border.focus {
+  border: solid 2px #353535;
+}
+
+.button {
+  padding: 7px 20px 10px 20px;
+  background-color: #84c441;
+  color: #fff;
+  border: solid 2px #fff;
+  border-radius: 15px;
 }

@@ -18,7 +18,7 @@ $(document).ready(function () {
     	} else {
 	    	slideoutMenu.animate({
 		    	left: -slideoutMenuWidth
-	    	}, 251);
+	    	}, 250);
         pageContent.toggleClass("container_opacity");
     	}
     });
